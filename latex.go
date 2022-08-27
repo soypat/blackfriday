@@ -324,6 +324,7 @@ func (options *Latex) DocumentHeader(out *bytes.Buffer) {
 	out.WriteString("\\addtolength{\\parskip}{0.5\\baselineskip}\n")
 	out.WriteString("\\parindent=0pt\n")
 	out.WriteString("\n")
+	out.WriteString("\\DeclareUnicodeCharacter{2605}{$\\star$}\n\\DeclareUnicodeCharacter{2606}{}")
 	// lstset with most settings taken from https://tex.stackexchange.com/questions/24528/having-problems-with-listings-and-utf-8-can-it-be-fixed
 	out.WriteString("\n\\lstset{\n")
 	out.WriteString("  numberstyle=\\tiny, stepnumber=2, numbersep=5pt,\n")
